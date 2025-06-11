@@ -23,15 +23,20 @@
         text-align: center;
       
       }
-      .slide {
-        font-family: "Caveat", cursive;
-        display: none;
-        padding: 350px 20px;
-        font-size: 80px;
-        animation: fade 1.5s ease-in-out;
-        color: #000;
-        text-shadow: 2px 2px 2px gray;
-      }
+      slide {
+  font-family: "Caveat", cursive;
+  display: none;
+  position: absolute;
+  top: 30px; /* Энэ нь дэлгэцийн дээд хэсгээс 30px зайтай байрлана */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 60px;
+  animation: fade 1.5s ease-in-out;
+  color: #000;
+  text-shadow: 2px 2px 2px gray;
+  text-align: center;
+}
+
       @keyframes fade {
         from {
           opacity: 0;
