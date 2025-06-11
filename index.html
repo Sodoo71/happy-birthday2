@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="mn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HBD</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url(https://marketplace.canva.com/EAE9XG0hOgk/1/0/1600w/canva-pink-red-colorful-birthday-zoom-virtual-background-32bHJ9XZg4U.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #fff;
+        font-family: sans-serif;
+        text-align: center;
+      }
+      .slide {
+        font-family: "Caveat", cursive;
+        display: none;
+        padding: 350px 20px;
+        font-size: 80px;
+        animation: fade 1.5s ease-in-out;
+        color: #000;
+        text-shadow: 2px 2px 2px gray;
+      }
+      @keyframes fade {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      iframe {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide" style="display: block">
+      🎉 Төрсөн өдрийн мэнд!
+      <div style="color: palevioletred">🩷Enkhpurev🩷</div>
+    </div>
+    <div class="slide">✨ Чиний энэ өдөр онцгой байх <br />болтугай!</div>
+    <div class="slide">💖 お誕生日おめでとう</div>
+    <div class="slide">🎂 Гоё бялуу идээрэй</div>
+    <div class="slide">🎁 Хамгийн сайхан Төрсөн өдрөө <br />тэмдэглээрэй</div>
+    <div class="slide">🥳 Happy Birthday 🥳</div>
+    <iframe
+      id="bg-music"
+      src="/sound-effect-happy-birthday-music-box-333245.mp3"
+      allow="autoplay"
+    ></iframe>
+    <script>
+      const slides = document.querySelectorAll(".slide");
+      let index = 0;
+
+      setInterval(() => {
+        slides[index].style.display = "none";
+        index = (index + 1) % slides.length;
+        slides[index].style.display = "block";
+      }, 4000);
+      function scrollToBottom() {
+        document
+          .getElementById("bottom")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>
